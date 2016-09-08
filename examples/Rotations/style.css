@@ -1,0 +1,98 @@
+
+body {
+    background: black;
+    margin: 0%;
+    padding: 0%;
+
+} 
+
+
+.NCLControlWrapper{
+    position: absolute;
+    top: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+    font-family: sans-serif;
+
+}
+
+.NCLControlWrapper input {
+    border : 0;
+    border-radius: 10px 10px 10px 10px;
+    background:rgba(0,255,255,0.5);
+    padding: 5px;
+    color: white;
+    display: block;
+}
+
+.NCLControlWrapper input[type="range"] {
+    border : 0;
+    background:rgba(0,255,255,0.5);
+    -webkit-appearance: none;
+    -moz-apperance:none;
+    padding: 5px;
+    color: white;
+    display: block;
+
+}
+
+.NCLControlWrapper input::-webkit-slider-thumb
+{
+    -webkit-appearance:none; -moz-apperance:none; width:20px; height:20px;
+    -webkit-border-radius:10px; -moz-border-radius:10px; -ms-border-radius:10px; -o-border-radius:50px; border-radius:10px;
+    background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(0.49, #dddddd), color-stop(0.51, #d1d1d1), color-stop(1, #a1a1a1) );
+}
+
+.NCLControlWrapper input:focus
+{ 
+    outline:none;
+    box-shadow: cyan 0 0 10px;
+
+}
+
+
+
+.NCLControlWrapper select {
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+    background: transparent;
+    background-color:rgba(0,255,255,0.5);
+    border: 0;
+    color: white;
+    display: block;
+    -webkit-appearance: none;
+    -moz-apperance:none;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.NCLControlWrapper option {
+    border : 0;
+    background: transparent;
+    background-color:black;
+    padding: 5px;
+    color: white;
+    display: block;
+    -webkit-appearance: none;
+    -moz-apperance:none;
+
+
+}
+
+
+.NCLControlWrapper select:focus
+{ 
+    outline:none;
+    box-shadow: cyan 0 0 10px;
+
+}
+
+.NCLControlWrapper label
+{
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+}

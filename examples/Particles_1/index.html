@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+            CanvasTest
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+
+
+    </head>
+    <body>
+        <div id="canvastest">
+        </div>
+        <script type="text/javascript" src="../../ncl.js"></script>
+        <script type="text/javascript" src="MyPlugin.js"></script>
+        <script type="text/javascript">
+            var NCL = new NylCanvasLibrary("canvastest", 800, 600, "canvas", 60);
+            //load the pluginlist
+            NCL.loadPlugin(new ShyParticles(NCL));
+            NCL.setFullscreen(true);
+            NCL.init();
+        </script>
+    </body>
+</html>
