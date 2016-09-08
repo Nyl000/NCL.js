@@ -19,12 +19,23 @@ function MyNclPlugin() {
 	//Setup is used to init variables before the loop render begins
 	this.setup = function()
 	{
-	
+	    this.position = new NCLVector2(this.NCL.mouseX, this.NCL.mouseY);
+	    this.size = 20;
+
 	};
 	
 	//The (infinite) loop render. You can draw here
 	this.draw = function(scene)
 	{
+	
+		this.NCL.clear();
+
+		this.NCL.colorShape('cyan')
+				.colorBorder('red')
+				.square(this.position, this.size);
+				
+		  this.position.setX(this.NCL.mouseX);
+		  this.position.setY(this.NCL.mouseY);
 	}
 }
 ```
