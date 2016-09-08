@@ -694,11 +694,11 @@ function NCLVector2(x, y) {
     this.y = y;
 }
 
-NCLVector2.setX = function(newx) {
+NCLVector2.prototype.setX = function(newx) {
     this.x = newx;
     return this;
 };
-NCLVector2.setY = function(newy) {
+NCLVector2.prototype.setY = function(newy) {
     this.y = newy;
     return this;
 };
