@@ -40,7 +40,7 @@ function MyNclPlugin() {
 }
 ```
 
-**2) In your HTML, create and empty div with an id**
+**2) In your HTML, create an empty div with an id**
 
 ```html
 
