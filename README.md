@@ -13,7 +13,7 @@ NylCanvasLibrary (NCL) is a lightweight toolbox to make canvas animations
 
 **1) Create a "plugin" function**
 
-```
+```javascript
 function MyNclPlugin() {
 
 	//Setup is used to init variables before the loop render begins
@@ -42,7 +42,7 @@ function MyNclPlugin() {
 
 **2) In your HTML, create and empty div with an id**
 
-```
+```html
 
 	<div id="myanimation"></div>
 	
@@ -50,7 +50,7 @@ function MyNclPlugin() {
 
 **2) Load the library and hook your function**
 
-```
+```javascript
 
 	var NCL = new NylCanvasLibrary("myanimation",800,600,"canvaselementid",60);
 	
