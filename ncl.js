@@ -17,6 +17,7 @@
 
 function NylCanvasLibrary(div, width, height, id, fps)
 {
+    var self = this;
 
     this.fps = fps;
     /**
@@ -142,15 +143,13 @@ function NylCanvasLibrary(div, width, height, id, fps)
      */
     this.getMousePosition = function(e) {
 
-        var _this = this;
-
         if (e.offsetX) {
-            _this.mouseX = e.offsetX;
-            _this.mouseY = e.offsetY;
+            self.mouseX = e.offsetX;
+            self.mouseY = e.offsetY;
         }
         else if (e.layerX) {
-            _this.mouseX = e.layerX;
-            _this.mouseY = e.layerY;
+            self.mouseX = e.layerX;
+            self.mouseY = e.layerY;
         }
 
         for (var plugin in instance.pluginlist) {
