@@ -28,10 +28,6 @@ function ParticlesGeneratorTest() {
 	this.onMousePress = function() {
 
 	};
-	
-	this.onMouseReleased = function() {
-
-	};	
 }
 
 function Generator(NCL, posX, posY) {
