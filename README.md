@@ -1,6 +1,8 @@
 # NCL.js
 NylCanvasLibrary (NCL) is a lightweight toolbox to make canvas animations 
 
+N.B: Examples are old and a little messy. I know about that. I'll prepare some new  examples soon :)
+
 ## Features
 * Use requestAnimationFrame API when possible, if not, a setInterval.
 * Provide helpers and function chaining to draw with canvas
