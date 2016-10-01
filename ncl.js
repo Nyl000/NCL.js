@@ -534,6 +534,10 @@ NylCanvasLibrary.prototype.opacity = function(opacity) {
     return this;
 };
 
+NylCanvasLibrary.prototype.clip = function() {
+    this.context.clip();
+    return this;
+};
 
 
 
