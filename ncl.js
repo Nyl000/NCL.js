@@ -545,7 +545,22 @@ NylCanvasLibrary.prototype.composite = function(operation) {
     return this;
 };
 
-
+NylCanvasLibrary.prototype.getOperations = function(){
+    return {
+        source_atop : "source-atop",
+        source_in : "source-in",
+        source_out : "source-out",
+        source_over : "source_over",
+        destination_atop : "destination-atop",
+        destination_in : "destination-in",
+        destination_out : "destination-out",
+        destination_over : "destination_over",
+        lighter : "lighter",
+        darker : "darker",
+        xor : "xor",
+        copy : "copy"
+    }
+};
 
 
 
