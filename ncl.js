@@ -347,6 +347,7 @@ NylCanvasLibrary.prototype.loadPlugin = function(plugin) {
 
 /**
  * Clear the screen
+ * Documented
  */
 NylCanvasLibrary.prototype.clear = function() {
     this.context.clearRect(0, 0, this.width, this.height);
@@ -381,12 +382,13 @@ NylCanvasLibrary.prototype.clearWithColor = function(color) {
 
 /**
  * Draw a square.
+ * Documented
  */
-NylCanvasLibrary.prototype.square = function(v1, size) {
-    if (!v1 instanceof NCLVector2)
+NylCanvasLibrary.prototype.square = function(startVector, size) {
+    if (!startVector instanceof NCLVector2)
         throw "params vector2d must be an instance of NCLVector2";
     this.context.beginPath();
-    this.context.rect(v1.x, v1.y, size, size);
+    this.context.rect(startVector.x, startVector.y, size, size);
     this.context.fill();
     this.context.stroke();
     this.context.closePath();
@@ -395,12 +397,13 @@ NylCanvasLibrary.prototype.square = function(v1, size) {
 
 /**
  * Draw a rect.
+ * Documented
  */
-NylCanvasLibrary.prototype.rect = function(v1, width, height) {
-    if (!v1 instanceof NCLVector2)
+NylCanvasLibrary.prototype.rect = function(startVector, width, height) {
+    if (!startVector instanceof NCLVector2)
         throw "params vector2d must be an instance of NCLVector2";
     this.context.beginPath();
-    this.context.rect(v1.x, v1.y, width, height);
+    this.context.rect(startVector.x, startVector.y, width, height);
     this.context.fill();
     this.context.stroke();
     this.context.closePath();
@@ -412,18 +415,19 @@ NylCanvasLibrary.prototype.rect = function(v1, width, height) {
  * @param {NCLVector2} v1
  * @param {NCLVector2} v2
  * @returns {NylCanvasLibrary}
+ * Documented
  */
-NylCanvasLibrary.prototype.line = function(v1, v2) {
-    if (!v1 instanceof NCLVector2) {
+NylCanvasLibrary.prototype.line = function(startVector, endVector) {
+    if (!startVector instanceof NCLVector2) {
         throw "params vector2d must be an instance of NCLVector2";
     }
-    if (!v2 instanceof NCLVector2) {
+    if (!endVector instanceof NCLVector2) {
         throw "params vector2d must be an instance of NCLVector2";
     }
 
     this.context.beginPath();
-    this.context.moveTo(v1.x, v1.y);
-    this.context.lineTo(v2.x, v2.y);
+    this.context.moveTo(startVector.x, startVector.y);
+    this.context.lineTo(endVector.x, endVector.y);
     this.context.fill();
     this.context.stroke();
     this.context.closePath();
@@ -432,32 +436,30 @@ NylCanvasLibrary.prototype.line = function(v1, v2) {
 
 /**
  * Draw a circle
+ * Documented
  */
-NylCanvasLibrary.prototype.circle = function(radius, vector2d) {
-    if (!vector2d instanceof NCLVector2) {
+NylCanvasLibrary.prototype.circle = function(radius, position) {
+    if (!position instanceof NCLVector2) {
         throw "params vector2d must be an instance of NCLVector2";
     }
     this.context.beginPath();
-    this.context.arc(vector2d.x, vector2d.y, radius, 0 * Math.PI, 2 * Math.PI);
+    this.context.arc(position.x, position.y, radius, 0 * Math.PI, 2 * Math.PI);
     this.context.stroke();
     this.context.fill();
     this.context.closePath();
     return this;
 };
 
-NylCanvasLibrary.prototype.image = function(image, vector2d, width, height ){
-    if (!vector2d instanceof NCLVector2) {
+NylCanvasLibrary.prototype.image = function(image, position, width, height ){
+    if (!position instanceof NCLVector2) {
         throw "params vector2d must be an instance of NCLVector2";
     }
     width = width || image.width;
     height = height || image.height;
 
-    if (typeof width !== 'undefined' && typeof height !== 'undefined') {
-        this.context.drawImage(image, vector2d.x, vector2d.y, width, height);
-    }
-    else {
-        this.context.drawImage(image, vector2d.x, vector2d.y);
-    }
+    this.context.drawImage(image, position.x, position.y, width, height);
+
+
     return this;
 
 };
@@ -561,8 +563,6 @@ NylCanvasLibrary.prototype.getOperations = function(){
         copy : "copy"
     }
 };
-
-
 
 /**
  * generate a random number
