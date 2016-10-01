@@ -540,6 +540,12 @@ NylCanvasLibrary.prototype.clip = function() {
 };
 
 
+NylCanvasLibrary.prototype.composite = function(operation) {
+    this.context.globalCompositeOperation = operation;
+    return this;
+};
+
+
 
 
 
