@@ -596,10 +596,14 @@ NylCanvasLibrary.prototype.rotate = function(radian) {
  */
 NylCanvasLibrary.prototype.pointRotate = function(radian, x, y) {
 
-    this.context.translate(x, y);
-    this.context.rotate(radian);
-    this.context.translate(-x, -y);
+    var v = new NCLVector2(x,y);
 
+    if (x instanceof NCLVector2) {
+        v = x;
+    }
+    this.context.translate(v.getX(), v.getY());
+    this.context.rotate(radian);
+    this.context.translate(-v.getX(), -v.getY());
 
     return this;
 };
