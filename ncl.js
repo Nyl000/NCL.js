@@ -463,14 +463,6 @@ NylCanvasLibrary.prototype.image = function(image, vector2d, width, height ){
 };
 
 
-/**
- * Draw a circle part
- * @param radius
- * @param vector2d
- * @param startAngle
- * @param degrees
- * @returns {NylCanvasLibrary}
- */
 NylCanvasLibrary.prototype.circlePart = function(radius, vector2d,startAngle, degrees) {
     var pi = degrees % 2;
     if (!vector2d instanceof NCLVector2) {
@@ -487,7 +479,6 @@ NylCanvasLibrary.prototype.circlePart = function(radius, vector2d,startAngle, de
 
 /**
  * Draw a triangle
- * Documented
  */
 NylCanvasLibrary.prototype.triangle = function(v1, v2, v3) {
     if (!v1 instanceof NCLVector2) {
@@ -510,14 +501,7 @@ NylCanvasLibrary.prototype.triangle = function(v1, v2, v3) {
     return this;
 };
 
-/**
- * Draw a text
- * @param text
- * @param font
- * @param position
- * @param align
- * Documented
- */
+
 NylCanvasLibrary.prototype.text = function(text, font, position, align)
 {
     if (!position instanceof NCLVector2) {
@@ -532,13 +516,12 @@ NylCanvasLibrary.prototype.text = function(text, font, position, align)
 
 /**
  * Draw a curve
- * Documented
  */
-NylCanvasLibrary.prototype.curve = function(location_origin, location_end, location_center) {
-    if (location_origin instanceof NCLVector2 && location_end instanceof NCLVector2 && location_center instanceof NCLVector2) {
+NylCanvasLibrary.prototype.curve = function(location_origin, location_end, location_control) {
+    if (location_origin instanceof NCLVector2 && location_end instanceof NCLVector2 && location_control instanceof NCLVector2) {
         this.context.beginPath();
         this.context.moveTo(location_origin.x, location_origin.y);
-        this.context.quadraticCurveTo(location_center.x, location_center.y, location_end.x, location_end.y);
+        this.context.quadraticCurveTo(location_control.x, location_control.y, location_end.x, location_end.y);
         this.context.stroke();
         this.context.closePath();
     }
