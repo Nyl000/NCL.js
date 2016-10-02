@@ -77,6 +77,13 @@ function MyNclPlugin() {
 | NCL.line(startVector, endVector)    | **startVector** : NCLVector2<br />**endVector** : NCLVector2<br /> | Draw a line|
 | NCL.circle(radius,position)    | **radius** : number<br /> **position** : NCLVector2 | Draw a circle|
 | NCL.triangle(v1,v2,v3)    | **v1** : NCLVector2<br />**v2** : NCLVector2<br />**v3** : NCLVector2<br /> | Draw a triangle|
+| NCL.curve(start, end, center) | **start** : NCLVector2<br />**end** : NCLVector2<br />**center** : NCLVector2<br /> | Draw a curve
+
+###Others
+| Function | Arguments | Description |
+| --- | --- | --- |
+| NCL.text(text, font, position, align) | **text** : string<br /> **font** : string  ([See Canvas Doc](http://www.w3schools.com/tags/canvas_font.asp))<br />**position** : NCLVector2<br /> **align**: string | Draw a text |
+
 
 
 ###Utils
