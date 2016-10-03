@@ -63,5 +63,38 @@ function MyNclPlugin() {
 	
 ```
 
-# More details and doc to come ! (But the code is documented)
+# API References
+
+**Doc is under writing and is not complete for now. Please be patient**
+
+## Render functions
+
+###Shapes
+| Function      | Arguments     | Description  |
+| ------------- |:-------------| -----|
+| NCL.square(startVector,size)    | **startVector** : NCLVector2<br /> **size** : number | Draw a square|
+| NCL.rect(startVector,width,height)    | **startVector** : NCLVector2<br /> **width** : number<br /> **height** : number | Draw a rectangle|
+| NCL.line(startVector, endVector)    | **startVector** : NCLVector2<br />**endVector** : NCLVector2<br /> | Draw a line|
+| NCL.circle(radius,position)    | **radius** : number<br /> **position** : NCLVector2 | Draw a circle|
+| NCL.triangle(v1,v2,v3)    | **v1** : NCLVector2<br />**v2** : NCLVector2<br />**v3** : NCLVector2<br /> | Draw a triangle|
+| NCL.curve(start, end, center) | **start** : NCLVector2<br />**end** : NCLVector2<br />**center** : NCLVector2<br /> | Draw a curve
+
+###Others
+| Function | Arguments | Description |
+| --- | --- | --- |
+| NCL.text(text, font, position, align) | **text** : string<br /> **font** : string  ([See Canvas Doc](http://www.w3schools.com/tags/canvas_font.asp))<br />**position** : NCLVector2<br /> **align**: string | Draw a text |
+
+
+
+###Utils
+| Function      | Arguments     | Description  |
+| ------------- |:-------------| -----|
+| NCL.clear()    | none | Clear the screen|
+| NCL.pointRotate(radians, position) | **radians** : float<br /> **position** : NCLVector2 | Rotate the context around a point
+ 
+
+
+
+
+#### More details and doc to come ! (But the code is documented)
 
