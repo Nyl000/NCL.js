@@ -90,7 +90,8 @@ function MyNclPlugin() {
 | Function      | Arguments     | Description  |
 | ------------- |:-------------| -----|
 | NCL.clear()    | none | Clear the screen|
-
+| NCL.pointRotate(radians, position) | **radians** : float<br /> **position** : NCLVector2 | Rotate the context around a point
+ 
 
 
 
