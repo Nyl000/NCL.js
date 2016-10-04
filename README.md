@@ -91,6 +91,8 @@ function MyNclPlugin() {
 | ------------- |:-------------| -----|
 | NCL.clear()    | none | Clear the screen|
 | NCL.pointRotate(radians, position) | **radians** : float<br /> **position** : NCLVector2 | Rotate the context around a point
+| NCL.save() | none | Save the context |
+| NCL.restore() | none | Restore the previously saved context| 
  
 
 
